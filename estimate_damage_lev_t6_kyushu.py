@@ -142,7 +142,6 @@ for calc in [x.strip() for x in calc_case.split(',')]:
     with open(f'test19_{calc_name}_household.csv', 'w') as f:
         f.write(f"household_sum,{household_sum}")
 
-    df_cama.loc[df_cama['household'] < 0.5, 'household'] = 0
     df_cama['floor'] = 1/np.ceil(df_cama['household']*500/df_cama['area'])
     
     df_cama['home_damage'] = df_cama['household']*df_cama['home_rate']*(9.801+3.441+3.957)*df_cama['floor']

@@ -11,9 +11,5 @@ The calculation results are stored in a directory named $out_dir in 01_make_for_
 This is a tool to downscale many ils calculation results in the same region. In fact, s01-downscale_flddph_chikuma.sh(revised CaMa tool) is running. If you want to calculate in a different region, please change the values of WEST, EAST, SOUTH, and NORTH in s01-downscale_flddph_chikuma.sh. You must enter integer latitude and longitude coordinates for each.
 The calculation results are stored in a directory named [fig,flood]
 
-(3) Run 03_make_damage_estimate.sh
-This is a tool to estimate flood damage in each region. In fact, the amount of damage is calculated in estimate_damage.py.
-The damage amount is only for three items, a home and housewares, and their total.
-This also allows for numerous calculations to be performed at once by specifying the calculation case in the variable $calc_case, separated by spaces.
-Before that, area_average_val.py interpolates the number of households from the Japanese census into CaMa-Flood's high-resolution grid. This value is used to produce the amount of damage.
-The calculation results are stored in a directory named $out_dir in 03_make_damage_estimate.sh
+(3) Run 03_fld_dmg_jp.py 
+This is a tool to estimate flood damage in Japan. The damage amount is only for three items, structural asset and contents asset, and their total. This also allows for numerous calculations to be performed at once by specifying the calculation case of Typhoon route in the variable $Route, separated by spaces. The calculation results are stored in a directory named $output_tif in 03_fld_dmg_jp.py

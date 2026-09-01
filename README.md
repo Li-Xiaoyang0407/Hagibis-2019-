@@ -13,7 +13,7 @@ The calculation results are stored in a directory named [fig,flood]
 
 (3) Run 03_make_damage_estimate.sh
 This is a tool to estimate flood damage in each region. In fact, the amount of damage is calculated in estimate_damage.py.
-The damage amount is only for three items, a home and housewares, and their total.
+The damage amount is only for three items, structural asset and contents asset, and their total.
 This also allows for numerous calculations to be performed at once by specifying the calculation case in the variable $calc_case, separated by spaces.
-Before that, area_average_val.py interpolates the number of households from the Japanese census into CaMa-Flood's high-resolution grid. This value is used to produce the amount of damage.
+Before that, area_average_val.py interpolates the number and area of buildings into CaMa-Flood's high-resolution grid. This value is used to produce the amount of damage.
 The calculation results are stored in a directory named $out_dir in 03_make_damage_estimate.sh
